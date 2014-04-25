@@ -44,6 +44,11 @@ angular.module('myApp.directives', [])
         drawPoint($scope.lat_0, $scope.lon_1);
         drawPoint($scope.lat_1, $scope.lon_0);
 
+        console.log($scope.CoordsData);
+
+
+
+
 //        drawPoint(55.744058,  37.928188);
 //        drawPoint(55.742992,  37.927084);
 

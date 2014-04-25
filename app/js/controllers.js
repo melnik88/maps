@@ -5,13 +5,23 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('pointsCtrl', ['$scope', 'geolocation','MAP_PARAMS' , function ($scope, geolocation, MAP_PARAMS) {
+    .controller('pointsCtrl', ['$scope', 'geolocation','MAP_PARAMS','$firebase', function ($scope, geolocation, MAP_PARAMS, $firebase) {
         var translateCoords,
             getScale,
             getCoords,
-            getMyLocation,
-            map_width,
-            map_height;
+            getMap,
+            coords,
+            firebaseConnect;
+
+        firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
+        firebaseConnect.on('child_added', function(snapshot) {
+            $scope.CoordsData = snapshot.val();
+
+        });
+
+
+
+
 //        масштаб карты (метры, брать с карты)
         $scope.mapScale = 706;
 //        левый верхний угол
@@ -21,9 +31,6 @@ angular.module('myApp.controllers', [])
         $scope.lat_1 = 55.742401;
         $scope.lon_1 = 37.930010;
 
-        map_width = MAP_PARAMS.WIDTH;
-        map_height = MAP_PARAMS.HEIGHT;
-
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
         $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH/ ($scope.lon_1 - $scope.lon_0));
 
@@ -31,16 +38,21 @@ angular.module('myApp.controllers', [])
 //подсчет масштаба карты. Пока не реализовано
         };
 
-        getMyLocation = function () {
+        getMap = function () {
             geolocation.getLocation().then( function (data) {
                 $scope.coords = { lat: data.coords.latitude, long: data.coords.longitude };
+                firebaseConnect.push({name: "vasia", coords: $scope.coords});
 
             });
         };
 
+        getMap();
+        console.log($scope.CoordsData);
 
-        getMyLocation();
-        setInterval(getMyLocation, '1000');
+
+
+
+//        setInterval(getMyLocation, '1000');
     }]);
 //  .controller('MyCtrl2', [function() {
 //
