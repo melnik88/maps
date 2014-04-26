@@ -6,11 +6,7 @@
 
 angular.module('myApp.controllers', [])
     .controller('pointsCtrl', ['$scope', 'geolocation','MAP_PARAMS','$firebase', function ($scope, geolocation, MAP_PARAMS, $firebase) {
-        var translateCoords,
-            getScale,
-            getCoords,
-            getMap,
-            coords,
+        var getMap,
             firebaseConnect;
 
         firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
@@ -19,24 +15,22 @@ angular.module('myApp.controllers', [])
 
         });
 
-
-
-
-//        масштаб карты (метры, брать с карты)
-        $scope.mapScale = 706;
+//      масштаб карты (метры, брать с карты)
+        $scope.mapScale = MAP_PARAMS.SCALE;
+        $scope.CanvasWidth = 658;
+        $scope.CanvasHeight = 856;
 //        левый верхний угол
-        $scope.lat_0 = 55.745966;
-        $scope.lon_0 = 37.925005;
+        $scope.lat_0 = 55.753199;
+        $scope.lon_0 = 38.004983;
 //        правый нижний угол
-        $scope.lat_1 = 55.742401;
-        $scope.lon_1 = 37.930010;
+        $scope.lat_1 = 55.746013;
+        $scope.lon_1 = 38.014992;
+
+        $scope.dotScale = 6;
 
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
-        $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH/ ($scope.lon_1 - $scope.lon_0));
+        $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / ($scope.lon_1 - $scope.lon_0));
 
-        getScale = function () {
-//подсчет масштаба карты. Пока не реализовано
-        };
 
         getMap = function () {
             geolocation.getLocation().then( function (data) {

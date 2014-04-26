@@ -10,8 +10,9 @@
 angular.module('myApp.services', [])
     .constant(
     'MAP_PARAMS', {
-            'WIDTH': 553,
-            'HEIGHT': 696
+            'WIDTH': 634,
+            'HEIGHT': 808,
+            'SCALE': 1120
     })
 
 //  value('version', '0.1');
