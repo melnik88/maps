@@ -5,6 +5,10 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
+    .controller('loginCtrl',['$scope', function(){
+    }])
+    .controller('appCtrl',['$scope', function(){
+    }])
     .controller('pointsCtrl', ['$scope', 'geolocation','MAP_PARAMS','$firebase', function ($scope, geolocation, MAP_PARAMS, $firebase) {
         var getMap,
             firebaseConnect;
