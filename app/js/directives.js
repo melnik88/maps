@@ -23,7 +23,9 @@ angular.module('myApp.directives', [])
                 var ctx,
                     drawPoint;
                 ctx = $element[0].getContext('2d');
-//рисование точки
+
+
+//              рисование точки
                 drawPoint = function (lat, lon) {
                     var x,
                         y;
@@ -31,6 +33,7 @@ angular.module('myApp.directives', [])
                     x = Math.abs(lon - $scope.lon_0) * $scope.x_coef;
                     ctx.fillStyle = "#FF0000";
                     console.log(x+" "+y);
+
 
                     ctx.fillRect(x, y, 10, 10);
                 }; //end of drawPoint
@@ -44,7 +47,11 @@ angular.module('myApp.directives', [])
         drawPoint($scope.lat_0, $scope.lon_1);
         drawPoint($scope.lat_1, $scope.lon_0);
 
-        console.log($scope.CoordsData);
+//обновление данных от пользователя
+        $scope.$watch("CoordsData", function(newval) {
+            onsole.log(newval);
+        })
+
 
 
 
