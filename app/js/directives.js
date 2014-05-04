@@ -34,10 +34,10 @@ angular.module('myApp.directives', [])
                 drawPoint = function (lat, lon) {
                     var x,
                         y;
-                    y = Math.abs(lat - $scope.lat_0) * $scope.y_coef+12;
-                    x = Math.abs(lon - $scope.lon_0) * $scope.x_coef+12;
+                    y = Math.abs(lat - $scope.lat_0) * $scope.y_coef + 12;
+                    x = Math.abs(lon - $scope.lon_0) * $scope.x_coef + 12;
                     ctx.fillStyle = "#FF0000";
-                    console.log(x+" "+y);
+                    console.log(x + " " + y);
                     ctx.fillRect(x, y, $scope.dotScale, $scope.dotScale);
                 }; //end of drawPoint
                 ctx.fillStyle = "#FF0000";
@@ -53,9 +53,9 @@ angular.module('myApp.directives', [])
                     drawPoint($scope.lat_1, $scope.lon_0);
 
 //обновление данных от пользователя
-        $scope.$watch("CoordsData", function(newval) {
-            onsole.log(newval);
-        })
+        $scope.$watch("CoordsData", function (newval) {
+            console.log(newval);
+        });
 
 
 //        drawPoint(55.744058,  37.928188);
@@ -63,7 +63,7 @@ angular.module('myApp.directives', [])
 
             }
         };
-    })
+    });
 
 
 

@@ -23,13 +23,13 @@ angular.module('myApp.controllers', [])
             }
             $location.path('/app');
         };
+
+
     })
     .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase) {
         var pushMyDataToFirebase,
             firebaseConnect,
             createToken;
-        console.log($rootScope.character);
-
 
         firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
 //      масштаб карты (метры, брать с карты)
@@ -65,7 +65,6 @@ angular.module('myApp.controllers', [])
 
         pushMyDataToFirebase = function () {
             var obj = {};
-            console.log($rootScope.character.name);
             geolocation.getLocation().then(function (data) {
                 $scope.coords = { lat: data.coords.latitude, long: data.coords.longitude };
                 obj[$rootScope.token] = {
@@ -78,6 +77,8 @@ angular.module('myApp.controllers', [])
             });
         };
         pushMyDataToFirebase();
+
+
 
 
         setInterval(pushMyDataToFirebase, '1000');
