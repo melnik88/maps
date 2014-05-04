@@ -44,3 +44,17 @@
     top: 0;
     left: 0;
 }
+
+
+/*форма логина*/
+.b-zombie-boy{
+    background: url(../img/character_sprite.png) no-repeat -64px 0;
+    width: 50px;
+    height: 76px;
+}
+
+.b-zombie-girl{
+    background: url(../img/character_sprite.png) no-repeat -5px 0;
+    width: 50px;
+    height: 76px;
+}

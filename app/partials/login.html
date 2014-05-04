@@ -1,3 +1,13 @@
-<form action="">
+    <form>
+        <label>Пожалуйста представьтесь <br/>
+            <input type="text" ng-model="name"/>
+        </label>
+        <br/>
+        <label>
+            <input type="radio" ng-model="character" value="zombie_boy"/><div class="b-zombie-boy"></div>
+            <input type="radio" ng-model="character" value="zombie_girl"/><div class="b-zombie-girl"></div>
+        </label>
+        <br/>
+        <button type="text" ng-click = "loginUser(name, character)">Войти</button>
 
-</form>
+    </form>
