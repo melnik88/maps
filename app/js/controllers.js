@@ -50,10 +50,14 @@ angular.module('myApp.controllers', [])
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
         $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / ($scope.lon_1 - $scope.lon_0));
 
+        firebaseConnect.on('child_changed', function (snapshot) {
+            $scope.CoordsData = snapshot.val().coords;
 
+        });
 
-        firebaseConnect.on('child_added', function(snapshot) {
-            $scope.CoordsData = snapshot.val();
+        firebaseConnect.on('child_added', function (snapshot) {
+            console.log(snapshot.val().coords);
+            $scope.CoordsData = snapshot.val().coords;
 
         });
 
@@ -64,9 +68,10 @@ angular.module('myApp.controllers', [])
         $rootScope.token = createToken();
 
         pushMyDataToFirebase = function () {
+            console.log("push data to database");
             var obj = {};
             geolocation.getLocation().then(function (data) {
-                $scope.coords = { lat: data.coords.latitude, long: data.coords.longitude };
+                $scope.coords = {lat: data.coords.latitude, lon: data.coords.longitude };
                 obj[$rootScope.token] = {
                     name: $rootScope.character.name,
                     coords: $scope.coords,
@@ -76,11 +81,8 @@ angular.module('myApp.controllers', [])
 
             });
         };
-        pushMyDataToFirebase();
-
-
-
 
         setInterval(pushMyDataToFirebase, '1000');
+
     });
 
