@@ -37,12 +37,23 @@ angular.module('myApp.controllers', [])
         $scope.mapScale = MAP_PARAMS.SCALE;
         $scope.CanvasWidth = 658;
         $scope.CanvasHeight = 856;
+//  салтыковка
+////        левый верхний угол
+//        $scope.lat_0 = 55.745992;
+//        $scope.lon_0 = 37.925026;
+////        правый нижний угол
+//        $scope.lat_1 = 55.742404;
+//        $scope.lon_1 = 37.929984;
+
+//        железнодорожный
+
 //        левый верхний угол
-        $scope.lat_0 = 55.745992;
-        $scope.lon_0 = 37.925026;
+        $scope.lat_0 = 55.753200;
+        $scope.lon_0 = 38.004990;
 //        правый нижний угол
-        $scope.lat_1 = 55.742404;
-        $scope.lon_1 = 37.929984;
+        $scope.lat_1 = 55.746016;
+        $scope.lon_1 = 38.015001;
+
 
         $scope.dotScale = 6;
 

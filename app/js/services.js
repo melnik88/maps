@@ -11,9 +11,9 @@ angular.module('myApp.services', [])
     .constant(
         'MAP_PARAMS',
         {
-            'WIDTH': 556,
-            'HEIGHT': 692,
+            'WIDTH': 635,
+            'HEIGHT': 810,
             'SCALE': 1120,
-            'SRC': 'img/map2.jpg'
+            'SRC': 'img/zheleznodorozhny.jpg'
         }
     );
