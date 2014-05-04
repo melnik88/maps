@@ -38,11 +38,11 @@ angular.module('myApp.controllers', [])
         $scope.CanvasWidth = 658;
         $scope.CanvasHeight = 856;
 //        левый верхний угол
-        $scope.lat_0 = 55.753199;
-        $scope.lon_0 = 38.004983;
+        $scope.lat_0 = 55.745992;
+        $scope.lon_0 = 37.925026;
 //        правый нижний угол
-        $scope.lat_1 = 55.746013;
-        $scope.lon_1 = 38.014992;
+        $scope.lat_1 = 55.742404;
+        $scope.lon_1 = 37.929984;
 
         $scope.dotScale = 6;
 

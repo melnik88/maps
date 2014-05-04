@@ -9,12 +9,11 @@
 // In this case it is a simple value service.
 angular.module('myApp.services', [])
     .constant(
-    'MAP_PARAMS', {
-            'WIDTH': 634,
-            'HEIGHT': 808,
+        'MAP_PARAMS',
+        {
+            'WIDTH': 556,
+            'HEIGHT': 692,
             'SCALE': 1120,
-            'SRC': 'img/zheleznodorozhny.jpg'
-
-    })
-
-//  value('version', '0.1');
+            'SRC': 'img/map2.jpg'
+        }
+    );
