@@ -12,7 +12,8 @@ angular.module('myApp.services', [])
     'MAP_PARAMS', {
             'WIDTH': 634,
             'HEIGHT': 808,
-            'SCALE': 1120
+            'SCALE': 1120,
+            'SRC': 'img/zheleznodorozhny.jpg'
     })
 
 //  value('version', '0.1');

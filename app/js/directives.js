@@ -3,7 +3,7 @@
 /* Directives */
 
 angular.module('myApp.directives', [])
-    .directive('map', function () {
+    .directive('map', function (MAP_PARAMS) {
         return {
             link: function ($scope, $element, attrs) {
                 var image,
@@ -11,7 +11,7 @@ angular.module('myApp.directives', [])
                 $element[0].width = $scope.CanvasWidth;
                 $element[0].height = $scope.CanvasHeight;
                 image = new Image();
-                image.src = 'img/zheleznodorozhny.jpg';
+                image.src = MAP_PARAMS.SRC;
                 image.onload = function () {
                     ctx = $element[0].getContext('2d');
                     ctx.drawImage(image, 0, 0);
