@@ -3,7 +3,6 @@
 'use strict';
 
 /* Controllers */
-
 angular.module('myApp.controllers', [])
     .controller('loginCtrl', function ($scope, $rootScope, $location) {
         $scope.character = 'zombie';
@@ -23,11 +22,7 @@ angular.module('myApp.controllers', [])
                 break;
             }
             $location.path('/app');
-
-
         };
-
-
     })
     .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase) {
         var pushMyDataToFirebase,
@@ -51,8 +46,10 @@ angular.module('myApp.controllers', [])
 
         $scope.dotScale = 6;
 
+
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
         $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / ($scope.lon_1 - $scope.lon_0));
+
 
 
         firebaseConnect.on('child_added', function(snapshot) {
@@ -83,11 +80,6 @@ angular.module('myApp.controllers', [])
         pushMyDataToFirebase();
 
 
-
-
         setInterval(pushMyDataToFirebase, '1000');
     });
-//  .controller('MyCtrl2', [function() {
-//
-//  }]);
 
