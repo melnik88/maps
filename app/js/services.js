@@ -14,6 +14,7 @@ angular.module('myApp.services', [])
             'HEIGHT': 808,
             'SCALE': 1120,
             'SRC': 'img/zheleznodorozhny.jpg'
+
     })
 
 //  value('version', '0.1');
