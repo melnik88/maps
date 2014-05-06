@@ -42,14 +42,14 @@ angular.module('myApp.directives', [])
                 }; //end of drawPoint
                 ctx.fillStyle = "#FF0000";
 
+                drawPoint($scope.lat_0, $scope.lon_0);
+                drawPoint($scope.lat_1, $scope.lon_1);
 
-                    drawPoint($scope.lat_0, $scope.lon_0);
-                    drawPoint($scope.lat_1, $scope.lon_1);
+                drawPoint($scope.lat_0, $scope.lon_1);
+                drawPoint($scope.lat_1, $scope.lon_0);
 
-                    drawPoint($scope.lat_0, $scope.lon_1);
-                    drawPoint($scope.lat_1, $scope.lon_0);
 
-                    drawPoint(55.749595, 38.009993);
+//                drawPoint(55.749595, 38.009993);
 
 //обновление данных от пользователя
         $scope.$watch("CoordsData", function (newval) {

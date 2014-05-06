@@ -29,7 +29,8 @@ angular.module('myApp.controllers', [])
     .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase) {
         var pushMyDataToFirebase,
             firebaseConnect,
-            createToken;
+            createToken,
+            getAllData;
 
         firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
 //      масштаб карты (метры, брать с карты)
@@ -61,22 +62,43 @@ angular.module('myApp.controllers', [])
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
         $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / ($scope.lon_1 - $scope.lon_0));
 
-        firebaseConnect.on('child_changed', function (snapshot) {
-            $scope.CoordsData = snapshot.val().coords;
+//        firebaseConnect.on('child_changed', function (snapshot) {
+//            console.log('data is updated');
+//            $scope.CoordsData = snapshot.val().coords;
+//
+//        });
 
-        });
+//        firebaseConnect.on('value', function (snapshot) {
+//            console.log('data is updated');
+//            $scope.CoordsData = snapshot.val().coords;
+//
+//        });
 
-        firebaseConnect.on('child_added', function (snapshot) {
-            console.log(snapshot.val().coords);
-            $scope.CoordsData = snapshot.val().coords;
 
-        });
+//        firebaseConnect.on('child_added', function (snapshot) {
+////            console.log(snapshot.val().coords);
+//            console.log('data is updated');
+//            $scope.CoordsData = snapshot.val().coords;
+//
+//        });
 
 
         createToken = function () {
             return Math.random().toString(36).substr(2);
         };
         $rootScope.token = createToken();
+
+
+        getAllData = function () {
+            firebaseConnect.on('child_added', function (snapshot) {
+//            console.log(snapshot.val().coords);
+            console.log('data is updated');
+            $scope.CoordsData = snapshot.val().coords;
+
+        });
+
+        }
+
 
         pushMyDataToFirebase = function () {
             console.log("push data to database");
@@ -88,12 +110,12 @@ angular.module('myApp.controllers', [])
                     coords: $scope.coords,
                     xp: $rootScope.character.xp
                 };
-                firebaseConnect.update(obj);
+                firebaseConnect.update(obj, getAllData);
 
             });
         };
 
-        setInterval(pushMyDataToFirebase, '1000');
+        setInterval(pushMyDataToFirebase, '2000');
 
     });
 
