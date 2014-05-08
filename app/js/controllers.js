@@ -28,10 +28,10 @@ angular.module('myApp.controllers', [])
                     name: name,
                     xp: 10,
                     coords:
-                    {
-                        lat: 0,
-                        lon: 0
-                    }
+                        {
+                            lat: 0,
+                            lon: 0
+                        }
                 };
                 break;
 
@@ -43,23 +43,18 @@ angular.module('myApp.controllers', [])
             $location.path('/app');
         };
     })
-    .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase, FIREBASE_PARAMS, localStorageService) {
+    .controller('appCtrl', function ($scope, MAP_PARAMS, FIREBASE_PARAMS, geolocation, $rootScope, $firebase,  localStorageService) {
 
         $scope.firebaseConnect = new Firebase(FIREBASE_PARAMS.PATH);
 
         $scope.mapScale = MAP_PARAMS.SCALE;
         $scope.CanvasWidth = 658;
         $scope.CanvasHeight = 856;
-//      left top corner
-        $scope.lat_0 = 55.753200;
-        $scope.lon_0 = 38.004990;
-//      right bottom corner
-        $scope.lat_1 = 55.746016;
-        $scope.lon_1 = 38.015001;
 //      dot size
         $scope.dotScale = 6;
-        $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
-        $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / ($scope.lon_1 - $scope.lon_0));
+        $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / (MAP_PARAMS.LAT1 - MAP_PARAMS.LAT0));
+        $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / (MAP_PARAMS.LON1 - MAP_PARAMS.LON0));
+
         $scope.pushInterval = null;
 
 //      init player from localstorage
