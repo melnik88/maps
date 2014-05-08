@@ -4,8 +4,12 @@
 
 /* Controllers */
 angular.module('myApp.controllers', [])
-    .controller('loginCtrl', function ($scope, $rootScope, $location) {
-        $scope.character = 'zombie';
+    .controller('loginCtrl', function ($scope, $rootScope, $location, localStorageService) {
+        var createToken;
+
+        createToken = function () {
+            return Math.random().toString(36).substr(2);
+        };
 
         $scope.loginUser = function (name, character) {
             switch (character) {
@@ -21,19 +25,30 @@ angular.module('myApp.controllers', [])
                 };
                 break;
             }
+
+            $rootScope.token = createToken();
+            localStorageService.clearAll();
+            localStorageService.set('token', $rootScope.token);
+
             $location.path('/app');
+//            тут можно создавать и присваивать уникальный токен
+
+
+
+
+
+
         };
 
 
     })
-    .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase) {
+    .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase, localStorageService) {
         var pushMyDataToFirebase,
             firebaseConnect,
-            createToken,
-            getAllData;
+            getAllData,
+            playerInit;
 
         firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
-//      масштаб карты (метры, брать с карты)
 
         $scope.mapScale = MAP_PARAMS.SCALE;
         $scope.CanvasWidth = 658;
@@ -62,32 +77,15 @@ angular.module('myApp.controllers', [])
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
         $scope.x_coef = Math.abs(MAP_PARAMS.WIDTH / ($scope.lon_1 - $scope.lon_0));
 
-//        firebaseConnect.on('child_changed', function (snapshot) {
-//            console.log('data is updated');
-//            $scope.CoordsData = snapshot.val().coords;
-//
-//        });
-
-//        firebaseConnect.on('value', function (snapshot) {
-//            console.log('data is updated');
-//            $scope.CoordsData = snapshot.val().coords;
-//
-//        });
-
-
-//        firebaseConnect.on('child_added', function (snapshot) {
-////            console.log(snapshot.val().coords);
-//            console.log('data is updated');
-//            $scope.CoordsData = snapshot.val().coords;
-//
-//        });
-
-
-        createToken = function () {
-            return Math.random().toString(36).substr(2);
-        };
-        $rootScope.token = createToken();
-
+        playerInit = function (){
+                $rootScope.token = localStorageService.get('token');
+                var dataRef = new Firebase('https://mymaps.firebaseio.com/' + $rootScope.token);
+                dataRef.on('value', function(snapshot) {
+                    $rootScope.character = snapshot.val();
+                    console.log($rootScope.character)
+                });
+            console.log('player is inited')
+        }
 
         getAllData = function () {
             firebaseConnect.on('child_added', function (snapshot) {
@@ -99,11 +97,13 @@ angular.module('myApp.controllers', [])
 
         }
 
+        if ($rootScope.token == undefined) { playerInit(); }
+
 
         pushMyDataToFirebase = function () {
-            console.log("push data to database");
-            var obj = {};
             geolocation.getLocation().then(function (data) {
+                var obj = {};
+
                 $scope.coords = {lat: data.coords.latitude, lon: data.coords.longitude };
                 obj[$rootScope.token] = {
                     name: $rootScope.character.name,

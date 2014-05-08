@@ -5,6 +5,7 @@
 angular.module('myApp', [
   'ngRoute',
   'geolocation',
+  'LocalStorageModule',
   'firebase',
   'myApp.filters',
   'myApp.services',
