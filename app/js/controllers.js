@@ -5,9 +5,7 @@
 /* Controllers */
 angular.module('myApp.controllers', [])
     .controller('loginCtrl', function ($scope, $rootScope, $location, localStorageService) {
-        var createToken;
-
-        createToken = function () {
+        $scope.createToken = function () {
             return Math.random().toString(36).substr(2);
         };
 
@@ -26,21 +24,16 @@ angular.module('myApp.controllers', [])
                 break;
             }
 
-            $rootScope.token = createToken();
+            $rootScope.token = $scope.createToken();
             localStorageService.clearAll();
             localStorageService.set('token', $rootScope.token);
-
             $location.path('/app');
 //            тут можно создавать и присваивать уникальный токен
         };
     })
     .controller('appCtrl', function ($scope, geolocation, $rootScope, MAP_PARAMS, $firebase, localStorageService) {
-        var pushMyDataToFirebase,
-            firebaseConnect,
-            getAllData,
-            playerInit;
 
-        firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
+        $scope.firebaseConnect = new Firebase("https://mymaps.firebaseio.com");
 
         $scope.mapScale = MAP_PARAMS.SCALE;
         $scope.CanvasWidth = 658;
@@ -61,7 +54,7 @@ angular.module('myApp.controllers', [])
 //      правый нижний угол
         $scope.lat_1 = 55.746016;
         $scope.lon_1 = 38.015001;
-
+//      размер точки
         $scope.dotScale = 6;
 
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / ($scope.lat_1 - $scope.lat_0));
@@ -69,7 +62,7 @@ angular.module('myApp.controllers', [])
 
         $scope.pushInterval = null;
 
-        playerInit = function () {
+        $scope.playerInit = function () {
             $rootScope.token = localStorageService.get('token');
             var dataRef = new Firebase('https://mymaps.firebaseio.com/' + $rootScope.token);
             dataRef.on('value', function(snapshot) {
@@ -78,15 +71,15 @@ angular.module('myApp.controllers', [])
             console.log('player is inited')
         }
 
-        getAllData = function () {
-            firebaseConnect.on('value', function (snapshot) {
+        $scope.getAllData = function () {
+            $scope.firebaseConnect.on('value', function (snapshot) {
             $scope.CoordsData = snapshot.val();
         });
         }
 
-        if ($rootScope.token == undefined) { playerInit(); }
+        if ($rootScope.token == undefined) { $scope.playerInit(); }
 
-        pushMyDataToFirebase = function () {
+        $scope.pushMyDataToFirebase = function () {
             geolocation.getLocation().then(function (data) {
                 var obj = {};
                 $scope.coords = {lat: data.coords.latitude, lon: data.coords.longitude };
@@ -95,18 +88,15 @@ angular.module('myApp.controllers', [])
                     coords: $scope.coords,
                     xp: $rootScope.character.xp
                 };
-                firebaseConnect.update(obj, getAllData);
+                $scope.firebaseConnect.update(obj, $scope.getAllData);
             });
         }
 
         $rootScope.$watch('token', function() {
             window.clearInterval($scope.pushInterval);
-            $scope.pushInterval = setInterval(pushMyDataToFirebase, 2000)
+            $scope.pushInterval = setInterval($scope.pushMyDataToFirebase, 2000)
         });
 
-        if ($rootScope.token == undefined) playerInit();
-
-
-
+        if ($rootScope.token == undefined) $scope.playerInit();
     });
 
