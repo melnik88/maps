@@ -16,4 +16,10 @@ angular.module('myApp.services', [])
             'SCALE': 1120,
             'SRC': 'img/zheleznodorozhny.jpg'
         }
-    );
+    )
+    .constant(
+        'FIREBASE_PARAMS',
+        {
+            'PATH': 'https://mymaps.firebaseio.com'
+        }
+    )
