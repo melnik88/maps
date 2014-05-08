@@ -79,15 +79,12 @@ angular.module('myApp.controllers', [])
         }
 
         getAllData = function () {
-            firebaseConnect.on('child_added', function (snapshot) {
-            console.log('data is updated');
-            $scope.CoordsData = snapshot.val().coords;
+            firebaseConnect.on('value', function (snapshot) {
+            $scope.CoordsData = snapshot.val();
         });
         }
 
         if ($rootScope.token == undefined) { playerInit(); }
-
-        console.log($rootScope.token);
 
         pushMyDataToFirebase = function () {
             geolocation.getLocation().then(function (data) {

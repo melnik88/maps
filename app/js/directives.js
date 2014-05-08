@@ -52,10 +52,12 @@ angular.module('myApp.directives', [])
 //                drawPoint(55.749595, 38.009993);
 
 //обновление данных от пользователя
-        $scope.$watch("CoordsData", function (newval) {
-            if (newval) {
-
-                drawPoint(newval.lat, newval.lon);
+        $scope.$watch("CoordsData", function (points) {
+            if (points) {
+                for (var index in points) {
+                    drawPoint(points[index].coords.lat, points[index].coords.lon);
+                };
+//
             }
         });
             }
