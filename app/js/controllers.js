@@ -5,6 +5,7 @@
 /* Controllers */
 angular.module('myApp.controllers', [])
     .controller('loginCtrl', function ($scope, $rootScope, $location, localStorageService) {
+    console.log('add some changes2222')
         $scope.createToken = function () {
             return Math.random().toString(36).substr(2);
         };
@@ -50,6 +51,7 @@ angular.module('myApp.controllers', [])
         $scope.mapScale = MAP_PARAMS.SCALE;
         $scope.CanvasWidth = 658;
         $scope.CanvasHeight = 856;
+
 //      dot size
         $scope.dotScale = 6;
         $scope.y_coef = Math.abs(MAP_PARAMS.HEIGHT / (MAP_PARAMS.LAT1 - MAP_PARAMS.LAT0));

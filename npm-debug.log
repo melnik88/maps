@@ -1,9 +1,9 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'isntall', '-g', 'bower' ]
-2 info using npm@1.4.3
-3 info using node@v0.10.26
-4 verbose cache add [ 'bower', null ]
-5 verbose cache add name=undefined spec="bower" args=["bower",null]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'uglify-js', '-g' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose cache add [ 'uglify-js', null ]
+5 verbose cache add name=undefined spec="uglify-js" args=["uglify-js",null]
 6 verbose parsed url { protocol: null,
 6 verbose parsed url   slashes: null,
 6 verbose parsed url   auth: null,
@@ -13,82 +13,57 @@
 6 verbose parsed url   hash: null,
 6 verbose parsed url   search: null,
 6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'bower',
-6 verbose parsed url   path: 'bower',
-6 verbose parsed url   href: 'bower' }
-7 silly lockFile 206e3ce5-bower bower
-8 verbose lock bower /Users/e.firsov/.npm/206e3ce5-bower.lock
-9 silly lockFile 206e3ce5-bower bower
-10 silly lockFile 206e3ce5-bower bower
-11 verbose addNamed [ 'bower', '' ]
+6 verbose parsed url   pathname: 'uglify-js',
+6 verbose parsed url   path: 'uglify-js',
+6 verbose parsed url   href: 'uglify-js' }
+7 silly lockFile d31cae06-uglify-js uglify-js
+8 verbose lock uglify-js /Users/e.firsov/.npm/d31cae06-uglify-js.lock
+9 silly lockFile d31cae06-uglify-js uglify-js
+10 silly lockFile d31cae06-uglify-js uglify-js
+11 verbose addNamed [ 'uglify-js', '' ]
 12 verbose addNamed [ null, '*' ]
-13 silly lockFile 1240aab1-bower bower@
-14 verbose lock bower@ /Users/e.firsov/.npm/1240aab1-bower.lock
-15 silly addNameRange { name: 'bower', range: '*', hasData: false }
-16 verbose url raw bower
-17 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
-18 verbose url resolved https://registry.npmjs.org/bower
-19 info trying registry request attempt 1 at 18:50:36
-20 verbose etag "AUZTX53ZA4I6TS2NPKXITCZ9P"
-21 http GET https://registry.npmjs.org/bower
-22 http 304 https://registry.npmjs.org/bower
+13 silly lockFile 679a1028-uglify-js uglify-js@
+14 verbose lock uglify-js@ /Users/e.firsov/.npm/679a1028-uglify-js.lock
+15 silly addNameRange { name: 'uglify-js', range: '*', hasData: false }
+16 verbose url raw uglify-js
+17 verbose url resolving [ 'https://registry.npmjs.org/', './uglify-js' ]
+18 verbose url resolved https://registry.npmjs.org/uglify-js
+19 info trying registry request attempt 1 at 17:28:41
+20 verbose etag "DVQ3A72FOSRE706DFST6V0EMR"
+21 http GET https://registry.npmjs.org/uglify-js
+22 http 304 https://registry.npmjs.org/uglify-js
 23 silly registry.get cb [ 304,
-23 silly registry.get   { date: 'Wed, 07 May 2014 14:50:37 GMT',
+23 silly registry.get   { date: 'Thu, 08 May 2014 13:28:42 GMT',
 23 silly registry.get     server: 'Apache',
 23 silly registry.get     via: '1.1 varnish',
-23 silly registry.get     'last-modified': 'Wed, 07 May 2014 14:50:37 GMT',
+23 silly registry.get     'last-modified': 'Thu, 08 May 2014 13:28:42 GMT',
 23 silly registry.get     'cache-control': 'max-age=1',
-23 silly registry.get     etag: '"AUZTX53ZA4I6TS2NPKXITCZ9P"',
-23 silly registry.get     'x-served-by': 'cache-lcy1135-LCY',
+23 silly registry.get     etag: '"DVQ3A72FOSRE706DFST6V0EMR"',
+23 silly registry.get     'x-served-by': 'cache-fra1229-FRA',
 23 silly registry.get     'x-cache': 'HIT',
 23 silly registry.get     'x-cache-hits': '1',
-23 silly registry.get     'x-timer': 'S1399474237.231303453,VS0,VE81',
+23 silly registry.get     'x-timer': 'S1399555722.718652725,VS0,VE1',
 23 silly registry.get     vary: 'Accept',
 23 silly registry.get     'content-length': '0',
 23 silly registry.get     'keep-alive': 'timeout=10, max=50',
 23 silly registry.get     connection: 'Keep-Alive' } ]
-24 verbose etag bower from cache
-25 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
-26 silly addNameRange versions [ 'bower',
-26 silly addNameRange   [ '0.1.0',
-26 silly addNameRange     '0.1.2',
-26 silly addNameRange     '0.1.3',
-26 silly addNameRange     '0.2.0',
-26 silly addNameRange     '0.3.0',
-26 silly addNameRange     '0.3.1',
-26 silly addNameRange     '0.3.2',
-26 silly addNameRange     '0.4.0',
-26 silly addNameRange     '0.5.0',
-26 silly addNameRange     '0.5.1',
-26 silly addNameRange     '0.6.0',
-26 silly addNameRange     '0.6.1',
-26 silly addNameRange     '0.6.2',
-26 silly addNameRange     '0.6.3',
-26 silly addNameRange     '0.6.4',
-26 silly addNameRange     '0.6.5',
-26 silly addNameRange     '0.6.6',
-26 silly addNameRange     '0.6.7',
-26 silly addNameRange     '0.6.8',
-26 silly addNameRange     '0.7.0',
-26 silly addNameRange     '0.7.1',
-26 silly addNameRange     '0.8.0',
-26 silly addNameRange     '0.8.1',
-26 silly addNameRange     '0.8.2',
-26 silly addNameRange     '0.8.3',
-26 silly addNameRange     '0.8.4',
-26 silly addNameRange     '0.8.5',
-26 silly addNameRange     '0.8.6',
-26 silly addNameRange     '0.9.0',
-26 silly addNameRange     '0.9.1',
-26 silly addNameRange     '0.9.2',
-26 silly addNameRange     '0.10.0',
-26 silly addNameRange     '1.0.0',
+24 verbose etag uglify-js from cache
+25 silly addNameRange number 2 { name: 'uglify-js', range: '*', hasData: true }
+26 silly addNameRange versions [ 'uglify-js',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.5',
 26 silly addNameRange     '1.0.1',
 26 silly addNameRange     '1.0.2',
 26 silly addNameRange     '1.0.3',
+26 silly addNameRange     '1.0.4',
+26 silly addNameRange     '1.0.5',
+26 silly addNameRange     '1.0.6',
+26 silly addNameRange     '1.0.7',
 26 silly addNameRange     '1.1.0',
 26 silly addNameRange     '1.1.1',
-26 silly addNameRange     '1.1.2',
 26 silly addNameRange     '1.2.0',
 26 silly addNameRange     '1.2.1',
 26 silly addNameRange     '1.2.2',
@@ -96,126 +71,102 @@
 26 silly addNameRange     '1.2.4',
 26 silly addNameRange     '1.2.5',
 26 silly addNameRange     '1.2.6',
-26 silly addNameRange     '1.2.7',
-26 silly addNameRange     '1.2.8',
 26 silly addNameRange     '1.3.0',
 26 silly addNameRange     '1.3.1',
 26 silly addNameRange     '1.3.2',
-26 silly addNameRange     '1.3.3' ] ]
-27 verbose addNamed [ 'bower', '1.3.3' ]
-28 verbose addNamed [ '1.3.3', '1.3.3' ]
-29 silly lockFile bfd96e13-bower-1-3-3 bower@1.3.3
-30 verbose lock bower@1.3.3 /Users/e.firsov/.npm/bfd96e13-bower-1-3-3.lock
-31 silly lockFile bfd96e13-bower-1-3-3 bower@1.3.3
-32 silly lockFile bfd96e13-bower-1-3-3 bower@1.3.3
-33 silly lockFile 1240aab1-bower bower@
-34 silly lockFile 1240aab1-bower bower@
-35 silly resolved [ { name: 'bower',
-35 silly resolved     version: '1.3.3',
-35 silly resolved     description: 'The browser package manager',
-35 silly resolved     author: { name: 'Twitter' },
-35 silly resolved     licenses: [ [Object] ],
-35 silly resolved     repository: { type: 'git', url: 'git://github.com/bower/bower' },
-35 silly resolved     main: 'lib',
-35 silly resolved     homepage: 'http://bower.io',
-35 silly resolved     engines: { node: '>=0.10.0' },
+26 silly addNameRange     '1.3.3',
+26 silly addNameRange     '1.3.4',
+26 silly addNameRange     '2.2.0',
+26 silly addNameRange     '2.2.1',
+26 silly addNameRange     '2.2.2',
+26 silly addNameRange     '2.2.3',
+26 silly addNameRange     '2.2.4',
+26 silly addNameRange     '2.2.5',
+26 silly addNameRange     '2.3.0',
+26 silly addNameRange     '2.3.1',
+26 silly addNameRange     '2.3.2',
+26 silly addNameRange     '2.3.3',
+26 silly addNameRange     '2.3.4',
+26 silly addNameRange     '2.3.5',
+26 silly addNameRange     '2.3.6',
+26 silly addNameRange     '1.3.5',
+26 silly addNameRange     '2.4.0',
+26 silly addNameRange     '2.4.1',
+26 silly addNameRange     '2.4.2',
+26 silly addNameRange     '2.4.3',
+26 silly addNameRange     '2.4.4',
+26 silly addNameRange     '2.4.5',
+26 silly addNameRange     '2.4.6',
+26 silly addNameRange     '2.4.7',
+26 silly addNameRange     '2.4.8',
+26 silly addNameRange     '2.4.9',
+26 silly addNameRange     '2.4.10',
+26 silly addNameRange     '2.4.11',
+26 silly addNameRange     '2.4.12',
+26 silly addNameRange     '2.4.13' ] ]
+27 verbose addNamed [ 'uglify-js', '2.4.13' ]
+28 verbose addNamed [ '2.4.13', '2.4.13' ]
+29 silly lockFile cc296735-uglify-js-2-4-13 uglify-js@2.4.13
+30 verbose lock uglify-js@2.4.13 /Users/e.firsov/.npm/cc296735-uglify-js-2-4-13.lock
+31 silly lockFile cc296735-uglify-js-2-4-13 uglify-js@2.4.13
+32 silly lockFile cc296735-uglify-js-2-4-13 uglify-js@2.4.13
+33 silly lockFile 679a1028-uglify-js uglify-js@
+34 silly lockFile 679a1028-uglify-js uglify-js@
+35 silly resolved [ { name: 'uglify-js',
+35 silly resolved     description: 'JavaScript parser, mangler/compressor and beautifier toolkit',
+35 silly resolved     homepage: 'http://lisperator.net/uglifyjs',
+35 silly resolved     main: 'tools/node.js',
+35 silly resolved     version: '2.4.13',
+35 silly resolved     engines: { node: '>=0.4.0' },
+35 silly resolved     maintainers: [ [Object] ],
+35 silly resolved     repository: { type: 'git', url: 'https://github.com/mishoo/UglifyJS2.git' },
 35 silly resolved     dependencies:
-35 silly resolved      { abbrev: '~1.0.4',
-35 silly resolved        archy: '~0.0.2',
-35 silly resolved        'bower-config': '~0.5.0',
-35 silly resolved        'bower-endpoint-parser': '~0.2.0',
-35 silly resolved        'bower-json': '~0.4.0',
-35 silly resolved        'bower-logger': '~0.2.2',
-35 silly resolved        'bower-registry-client': '~0.2.0',
-35 silly resolved        cardinal: '~0.4.0',
-35 silly resolved        chalk: '~0.4.0',
-35 silly resolved        chmodr: '~0.1.0',
-35 silly resolved        'decompress-zip': '~0.0.6',
-35 silly resolved        fstream: '~0.1.22',
-35 silly resolved        'fstream-ignore': '~0.0.6',
-35 silly resolved        glob: '~3.2.9',
-35 silly resolved        'graceful-fs': '~2.0.0',
-35 silly resolved        handlebars: '~1.3.0',
-35 silly resolved        inquirer: '~0.4.0',
-35 silly resolved        insight: '~0.3.0',
-35 silly resolved        'is-root': '~0.1.0',
-35 silly resolved        junk: '~0.3.0',
-35 silly resolved        lockfile: '~0.4.2',
-35 silly resolved        'lru-cache': '~2.5.0',
-35 silly resolved        mkdirp: '~0.3.5',
-35 silly resolved        mout: '~0.9.1',
-35 silly resolved        nopt: '~2.2.0',
-35 silly resolved        opn: '~0.1.1',
-35 silly resolved        osenv: '~0.0.3',
-35 silly resolved        'p-throttler': '~0.0.1',
-35 silly resolved        promptly: '~0.2.0',
-35 silly resolved        q: '~1.0.1',
-35 silly resolved        request: '~2.34.0',
-35 silly resolved        'request-progress': '~0.3.0',
-35 silly resolved        retry: '~0.6.0',
-35 silly resolved        rimraf: '~2.2.0',
-35 silly resolved        semver: '~2.2.1',
-35 silly resolved        'shell-quote': '~1.4.1',
-35 silly resolved        'stringify-object': '~0.2.0',
-35 silly resolved        tar: '~0.1.17',
-35 silly resolved        tmp: '~0.0.20',
-35 silly resolved        'update-notifier': '~0.1.8',
-35 silly resolved        which: '~1.0.5' },
-35 silly resolved     devDependencies:
-35 silly resolved      { 'expect.js': '~0.3.1',
-35 silly resolved        grunt: '~0.4.4',
-35 silly resolved        'grunt-contrib-jshint': '~0.10.0',
-35 silly resolved        'grunt-contrib-watch': '~0.6.1',
-35 silly resolved        'grunt-exec': '~0.4.2',
-35 silly resolved        'grunt-simple-mocha': '~0.4.0',
-35 silly resolved        istanbul: '~0.2.4',
-35 silly resolved        'load-grunt-tasks': '~0.4.0',
-35 silly resolved        mocha: '~1.18',
-35 silly resolved        nock: '~0.28.2',
-35 silly resolved        proxyquire: '~0.6.0' },
-35 silly resolved     scripts: { test: 'grunt test' },
-35 silly resolved     bin: { bower: 'bin/bower' },
-35 silly resolved     preferGlobal: true,
-35 silly resolved     readme: '# Bower [![Build Status](https://travis-ci.org/bower/bower.svg?branch=master)](https://travis-ci.org/bower/bower)\n\n<img align="right" height="300" src="http://bower.io/img/bower-logo.png">\n\n> A package manager for the web\n\nIt offers a generic, unopinionated solution to the problem of **front-end package management**, while exposing the package dependency model via an API that can be consumed by a more opinionated build stack. There are no system wide dependencies, no dependencies are shared between different apps, and the dependency tree is flat.\n\nBower runs over Git, and is package-agnostic. A packaged component can be made up of any type of asset, and use any type of transport (e.g., AMD, CommonJS, etc.).\n\n[View all packages available through Bower\'s registry](http://bower.io/search/).\n\n\n## Install\n\n```sh\n$ npm install -g bower\n```\n\nBower depends on [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/). Also make sure that [git](http://git-scm.com/) is installed as some bower\npackages require it to be fetched and installed.\n\n\n## Usage\n\nMuch more information is available via `bower help` once it\'s installed. This\nis just enough to get you started.\n\n### Installing packages and dependencies\n\nBower offers several ways to install packages:\n\n##### Using the dependencies listed in the current directory\'s bower.json\n\n```sh\n$ bower install\n```\n\n##### Using a local or remote package\n\n```sh\n$ bower install <package>\n```\n\n##### Using a specific version of a package\n\n```sh\n$ bower install <package>#<version>\n```\n\n##### Using a different name and a specific version of a package\n\n```sh\n$ bower install <name>=<package>#<version>\n```\n\nWhere `<package>` can be any one of the following:\n\n* A name that maps to a package registered with Bower, e.g, `jquery`. ‡\n* A public remote Git endpoint, e.g., `git://github.com/someone/some-package.git`. ‡\n* A private Git repository, e.g., `https://github.com/someone/some-package.git`. If the protocol is https, a prompt will ask for the credentials. ssh can also be used, e.g., `git@github.com:someone/some-package.git` and can authenticate with the user\'s ssh public/private keys. ‡\n* A local endpoint, i.e., a folder that\'s a Git repository. ‡\n* A public remote Subversion endpoint, e.g., `svn+http://package.googlecode.com/svn/`. ‡\n* A private Subversion repository, e.g., `svn+ssh://package.googlecode.com/svn/` or `svn+https://package.googlecode.com/svn/`. ‡\n* A local endpoint, i.e., a folder that\'s an Subversion repository, e.g., `svn+file:///path/to/svn/`. ‡\n* A shorthand endpoint, e.g., `someone/some-package` (defaults to GitHub). ‡\n* A URL to a file, including `zip` and `tar` files. Its contents will be\n  extracted.\n\n‡ These types of `<package>` might have versions available. You can specify a\n[semver](http://semver.org/) compatible version to fetch a specific release, and lock the\npackage to that version. You can also specify a [range](https://github.com/isaacs/node-semver#ranges) of versions.\n\nIf you are using a package that is a git endpoint, you may use any tag, commit SHA,\nor branch name as a version. For example: `<package>#<sha>`. Using branches is not\nrecommended because the HEAD does not reference a fixed commit SHA.\n\nIf you are using a package that is a subversion endpoint, you may use any tag, revision number,\nor branch name as a version. For example: `<package>#<revision>`.\n\nAll package contents are installed in the `bower_components` directory by default.\nYou should **never** directly modify the contents of this directory.\n\nUsing `bower list` will show all the packages that are installed locally.\n\n**N.B.** If you aren\'t authoring a package that is intended to be consumed by\nothers (e.g., you\'re building a web app), you should always [check installed\npackages into source control](http://addyosmani.com/blog/checking-in-front-end-dependencies/).\n\n\n### Custom install directory\n\nA custom install location can be set in a `.bowerrc` file using the `directory` property. The .bowerrc file should be a sibling of your project\'s bower.json.\n\n```json\n{\n  "directory": "app/components"\n}\n```\n\n\n### Finding packages\n\nTo search for packages registered with Bower:\n\n```sh\n$ bower search [<name>]\n```\n\nUsing just `bower search` will list all packages in the registry.\n\n### Using packages\n\nWe discourage using bower components statically for performance and security reasons (if component has an `upload.php` file that is not ignored, that can be easily exploited to do malicious stuff).\n\nThe best approach is to process components installed by bower with build tool (like [Grunt](http://gruntjs.com/) or [gulp](http://gulpjs.com/)), and serve them concatenated or using module loader (like [RequireJS](http://requirejs.org/)).\n\n### Uninstalling packages\n\nTo uninstall a locally installed package:\n\n```sh\n$ bower uninstall <package-name>\n```\n\n\n#### Warning\n\nOn `prezto` or `oh-my-zsh`, do not forget to `alias bower=\'noglob bower\'` or `bower install jquery\\#1.9.1`\n\n#### Running commands with sudo\n\nBower is a user command, there is no need to execute it with superuser permissions.\nHowever, if you still want to run commands with sudo, use `--allow-root` option.\n\n#### A note for Windows users\n\nTo use Bower on Windows, you must install\n[msysgit](http://msysgit.github.io/) correctly. Be sure to check the\noption shown below:\n\n![msysgit](http://f.cl.ly/items/2V2O3i1p3R2F1r2v0a12/mysgit.png)\n\nNote that if you use TortoiseGit and if Bower keeps asking for your SSH\npassword, you should add the following environment variable: `GIT_SSH -\nC:\\Program Files\\TortoiseGit\\bin\\TortoisePlink.exe`. Adjust the `TortoisePlink`\npath if needed.\n\n### Using bower\'s cache\n\nBower supports installing packages from its local cache (without internet connection), if the packages were installed before.\n\n```sh\n$ bower install <package-name> --offline\n```\n\nThe content of the cache can be listed with:\n\n```sh\n$ bower cache list\n```\n\nThe cache can be cleaned with:\n\n```sh\n$ bower cache clean\n```\n\n## Configuration\n\nBower can be configured using JSON in a `.bowerrc` file.\n\nThe current spec can be read\n[here](https://docs.google.com/document/d/1APq7oA9tNao1UYWyOm8dKqlRP2blVkROYLZ2fLIjtWc/edit#heading=h.4pzytc1f9j8k)\nin the `Configuration` section.\n\n## Running on a continuous integration server\n\nBower will skip some interactive and analytics operations if it finds a `CI` environmental variable set to `true`. You will find that the `CI` variable is already set for you on many continuous integration servers, e.g., [CircleCI](https://circleci.com/docs/environment-variables#basics) and [Travis-CI](http://docs.travis-ci.com/user/ci-environment/#Environment-variables).\n\nYou may try to set manually set `CI` variable manually before running your Bower commands. On Mac or Linux, `export CI=true` and on Windows `set CI=true`\n\n### Interactive configuration\n\nIf for some reason you are unable to set the `CI` environment variable, you can alternately use the `--config.interactive=false` flag. (`bower install --config.interactive=false`)\n\n## Defining a package\n\nYou must create a `bower.json` in your project\'s root, and specify all of its\ndependencies. This is similar to Node\'s `package.json`, or Ruby\'s `Gemfile`,\nand is useful for locking down a project\'s dependencies.\n\n*NOTE:* In versions of Bower before 0.9.0 the package metadata file was called\n`component.json` rather than `bower.json`. This has changed to avoid a name\nclash with another tool. You can still use `component.json` for now but it is\ndeprecated and the automatic fallback is likely to be removed in an upcoming\nrelease.\n\nYou can interactively create a `bower.json` with the following command:\n\n```sh\n$ bower init\n```\n\nThe `bower.json` ([spec](https://github.com/bower/bower.json-spec)) defines several options, including:\n\n* `name` (required): The name of your package.\n* `version`: A semantic version number (see [semver](http://semver.org/)).\n* `main` [string|array]: The primary endpoints of your package.\n* `ignore` [array]: An array of paths not needed in production that you want\n  Bower to ignore when installing your package.\n* `dependencies` [hash]: Packages your package depends upon in production.\n  Note that you can specify [ranges](https://github.com/isaacs/node-semver#ranges)\n  of versions for your dependencies.\n* `devDependencies` [hash]: Development dependencies.\n* `private` [boolean]: Set to true if you want to keep the package private and\n  do not want to register the package in future.\n\n```json\n{\n  "name": "my-project",\n  "description": "My project does XYZ...",\n  "version": "1.0.0",\n  "main": "path/to/main.css",\n  "ignore": [\n    ".jshintrc",\n    "**/*.txt"\n  ],\n  "dependencies": {\n    "<name>": "<version>",\n    "<name>": "<folder>",\n    "<name>": "<package>"\n  },\n  "devDependencies": {\n    "<test-framework-name>": "<version>"\n  }\n}\n```\n\n### Registering packages\n\nTo register a new package:\n\n* There **must** be a valid manifest JSON in the current working directory.\n* Your package should use [semver](http://semver.org/) Git tags.\n* Your package **must** be available at a Git endpoint (e.g., GitHub); remember\n  to push your Git tags!\n\nThen use the following command:\n\n```sh\n$ bower register <my-package-name> <git-endpoint>\n```\n\nThe Bower registry does not have authentication or user management at this point\nin time. It\'s on a first come, first served basis. Think of it like a URL\nshortener. Now anyone can run `bower install <my-package-name>`, and get your\nlibrary installed.\n\nThere is no direct way to unregister a package yet. For now, you can [request a\npackage be unregistered](https://github.com/bower/bower/issues/120).\n\n\n## Consuming a package\n\nBower also makes available a source mapping. This can be used by build tools to\neasily consume Bower packages.\n\nIf you pass the `--paths` option to Bower\'s `list` command, you will get a\nsimple name-to-path mapping:\n\n```json\n{\n  "backbone": "bower_components/backbone/index.js",\n  "jquery": "bower_components/jquery/index.js",\n  "underscore": "bower_components/underscore/index.js"\n}\n```\n\nAlternatively, every command supports the `--json` option that makes bower\noutput JSON. Command result is outputted to `stdout` and error/logs to\n`stderr`.\n\n\n## Programmatic API\n\nBower provides a powerful, programmatic API. All commands can be accessed\nthrough the `bower.commands` object.\n\n```js\nvar bower = require(\'bower\');\n\nbower.commands\n.install([\'jquery\'], { save: true }, { /* custom config */ })\n.on(\'end\', function (installed) {\n    console.log(installed);\n});\n\nbower.commands\n.search(\'jquery\', {})\n.on(\'end\', function (results) {\n    console.log(results);\n});\n```\n\nCommands emit four types of events: `log`, `prompt`, `end`, `error`.\n\n* `log` is emitted to report the state/progress of the command.\n* `prompt` is emitted whenever the user needs to be prompted.\n* `error` will only be emitted if something goes wrong.\n* `end` is emitted when the command successfully ends.\n\nFor a better of idea how this works, you may want to check out [our bin\nfile](https://github.com/bower/bower/blob/master/bin/bower).\n\nWhen using bower programmatically, prompting is disabled by default. Though you can enable it when calling commands with `interactive: true` in the config.\nThis requires you to listen for the `prompt` event and handle the prompting yourself. The easiest way is to use the [inquirer](https://npmjs.org/package/inquirer) npm module like so:\n\n```js\nvar inquirer =  require(\'inquirer\');\n\nbower.commands\n.install([\'jquery\'], { save: true }, { interactive: true })\n// ..\n.on(\'prompt\', function (prompts, callback) {\n    inquirer.prompt(prompts, callback);\n});\n```\n\n\n## Completion (experimental)\n\n_NOTE_: Completion is still not implemented for the 1.0.0 release\n\nBower now has an experimental `completion` command that is based on, and works\nsimilarly to the [npm completion](https://npmjs.org/doc/completion.html). It is\nnot available for Windows users.\n\nThis command will output a Bash / ZSH script to put into your `~/.bashrc`,\n`~/.bash_profile`, or `~/.zshrc` file.\n\n```sh\n$ bower completion >> ~/.bash_profile\n```\n\n\n## Support\n\n* [StackOverflow](http://stackoverflow.com/questions/tagged/bower)\n* [Mailinglist](http://groups.google.com/group/twitter-bower) - twitter-bower@googlegroups.com\n* [\\#bower](http://webchat.freenode.net/?channels=bower) on Freenode\n\n\n## Contributing\n\nWe welcome contributions of all kinds from anyone. Please take a moment to\nreview the [guidelines for contributing](CONTRIBUTING.md).\n\n* [Bug reports](CONTRIBUTING.md#bugs)\n* [Feature requests](CONTRIBUTING.md#features)\n* [Pull requests](CONTRIBUTING.md#pull-requests)\n\n\n## Bower Team\n\n### Core team\n\n* [@satazor](https://github.com/satazor)\n* [@wibblymat](https://github.com/wibblymat)\n* [@paulirish](https://github.com/paulirish)\n* [@benschwarz](https://github.com/benschwarz)\n* [@sindresorhus](https://github.com/sindresorhus)\n* [@svnlto](https://github.com/svnlto)\n* [@sheerun](https://github.com/sheerun)\n\nThanks for assistance and contributions:\n\n[@addyosmani](https://github.com/addyosmani),\n[@ahmadnassri](https://github.com/ahmadnassri),\n[@angus-c](https://github.com/angus-c),\n[@borismus](https://github.com/borismus),\n[@carsonmcdonald](https://github.com/carsonmcdonald),\n[@chriseppstein](https://github.com/chriseppstein),\n[@danwrong](https://github.com/danwrong),\n[@davidmaxwaterman](https://github.com/davidmaxwaterman),\n[@desandro](https://github.com/desandro),\n[@hemanth](https://github.com/hemanth),\n[@isaacs](https://github.com/isaacs),\n[@josh](https://github.com/josh),\n[@jrburke](https://github.com/jrburke),\n[@kennethklee](https://github.com/kennethklee),\n[@marcelombc](https://github.com/marcelombc),\n[@marcooliveira](https://github.com/marcooliveira),\n[@mklabs](https://github.com/mklabs),\n[@MrDHat](https://github.com/MrDHat),\n[@necolas](https://github.com/necolas),\n[@richo](https://github.com/richo),\n[@rvagg](https://github.com/rvagg),\n[@ryanflorence](https://github.com/ryanflorence),\n[@SlexAxton](https://github.com/SlexAxton),\n[@sstephenson](https://github.com/sstephenson),\n[@tomdale](https://github.com/tomdale),\n[@uzquiano](https://github.com/uzquiano),\n[@visionmedia](https://github.com/visionmedia),\n[@wagenet](https://github.com/wagenet),\n[@wycats](https://github.com/wycats)\n\n### Bower Alumni\n\n* [@fat](https://github.com/fat)\n* [@maccman](https://github.com/maccman)\n\n\n## License\n\nCopyright (c) 2014 Twitter and other contributors\n\nLicensed under the MIT License\n',
+35 silly resolved      { async: '~0.2.6',
+35 silly resolved        'source-map': '~0.1.33',
+35 silly resolved        optimist: '~0.3.5',
+35 silly resolved        'uglify-to-browserify': '~1.0.0' },
+35 silly resolved     browserify: { transform: [Object] },
+35 silly resolved     bin: { uglifyjs: 'bin/uglifyjs' },
+35 silly resolved     scripts: { test: 'node test/run-tests.js' },
+35 silly resolved     readme: 'UglifyJS 2\n==========\n[![Build Status](https://travis-ci.org/mishoo/UglifyJS2.png)](https://travis-ci.org/mishoo/UglifyJS2)\n\nUglifyJS is a JavaScript parser, minifier, compressor or beautifier toolkit.\n\nThis page documents the command line utility.  For\n[API and internals documentation see my website](http://lisperator.net/uglifyjs/).\nThere\'s also an\n[in-browser online demo](http://lisperator.net/uglifyjs/#demo) (for Firefox,\nChrome and probably Safari).\n\nInstall\n-------\n\nFirst make sure you have installed the latest version of [node.js](http://nodejs.org/)\n(You may need to restart your computer after this step).\n\nFrom NPM for use as a command line app:\n\n    npm install uglify-js -g\n\nFrom NPM for programmatic use:\n\n    npm install uglify-js\n\nFrom Git:\n\n    git clone git://github.com/mishoo/UglifyJS2.git\n    cd UglifyJS2\n    npm link .\n\nUsage\n-----\n\n    uglifyjs [input files] [options]\n\nUglifyJS2 can take multiple input files.  It\'s recommended that you pass the\ninput files first, then pass the options.  UglifyJS will parse input files\nin sequence and apply any compression options.  The files are parsed in the\nsame global scope, that is, a reference from a file to some\nvariable/function declared in another file will be matched properly.\n\nIf you want to read from STDIN instead, pass a single dash instead of input\nfiles.\n\nThe available options are:\n\n```\n  --source-map       Specify an output file where to generate source map.\n                                                                        [string]\n  --source-map-root  The path to the original source to be included in the\n                     source map.                                        [string]\n  --source-map-url   The path to the source map to be added in //#\n                     sourceMappingURL.  Defaults to the value passed with\n                     --source-map.                                      [string]\n  --source-map-include-sources\n                     Pass this flag if you want to include the content of\n                     source files in the source map as sourcesContent\n                     property.                                         [boolean]\n  --in-source-map    Input source map, useful if you\'re compressing JS that was\n                     generated from some other original code.\n  --screw-ie8        Pass this flag if you don\'t care about full compliance\n                     with Internet Explorer 6-8 quirks (by default UglifyJS\n                     will try to be IE-proof).                         [boolean]\n  --expr             Parse a single expression, rather than a program (for\n                     parsing JSON)                                     [boolean]\n  -p, --prefix       Skip prefix for original filenames that appear in source\n                     maps. For example -p 3 will drop 3 directories from file\n                     names and ensure they are relative paths. You can also\n                     specify -p relative, which will make UglifyJS figure out\n                     itself the relative paths between original sources, the\n                     source map and the output file.                    [string]\n  -o, --output       Output file (default STDOUT).\n  -b, --beautify     Beautify output/specify output options.            [string]\n  -m, --mangle       Mangle names/pass mangler options.                 [string]\n  -r, --reserved     Reserved names to exclude from mangling.\n  -c, --compress     Enable compressor/pass compressor options. Pass options\n                     like -c hoist_vars=false,if_return=false. Use -c with no\n                     argument to use the default compression options.   [string]\n  -d, --define       Global definitions                                 [string]\n  -e, --enclose      Embed everything in a big function, with a configurable\n                     parameter/argument list.                           [string]\n  --comments         Preserve copyright comments in the output. By default this\n                     works like Google Closure, keeping JSDoc-style comments\n                     that contain "@license" or "@preserve". You can optionally\n                     pass one of the following arguments to this flag:\n                     - "all" to keep all comments\n                     - a valid JS regexp (needs to start with a slash) to keep\n                     only comments that match.\n                     Note that currently not *all* comments can be kept when\n                     compression is on, because of dead code removal or\n                     cascading statements into sequences.               [string]\n  --preamble         Preamble to prepend to the output.  You can use this to\n                     insert a comment, for example for licensing information.\n                     This will not be parsed, but the source map will adjust\n                     for its presence.\n  --stats            Display operations run time on STDERR.            [boolean]\n  --acorn            Use Acorn for parsing.                            [boolean]\n  --spidermonkey     Assume input files are SpiderMonkey AST format (as JSON).\n                                                                       [boolean]\n  --self             Build itself (UglifyJS2) as a library (implies\n                     --wrap=UglifyJS --export-all)                     [boolean]\n  --wrap             Embed everything in a big function, making the “exports”\n                     and “global” variables available. You need to pass an\n                     argument to this option to specify the name that your\n                     module will take when included in, say, a browser.\n                                                                        [string]\n  --export-all       Only used when --wrap, this tells UglifyJS to add code to\n                     automatically export all globals.                 [boolean]\n  --lint             Display some scope warnings                       [boolean]\n  -v, --verbose      Verbose                                           [boolean]\n  -V, --version      Print version number and exit.                    [boolean]\n```\n\nSpecify `--output` (`-o`) to declare the output file.  Otherwise the output\ngoes to STDOUT.\n\n## Source map options\n\nUglifyJS2 can generate a source map file, which is highly useful for\ndebugging your compressed JavaScript.  To get a source map, pass\n`--source-map output.js.map` (full path to the file where you want the\nsource map dumped).\n\nAdditionally you might need `--source-map-root` to pass the URL where the\noriginal files can be found.  In case you are passing full paths to input\nfiles to UglifyJS, you can use `--prefix` (`-p`) to specify the number of\ndirectories to drop from the path prefix when declaring files in the source\nmap.\n\nFor example:\n\n    uglifyjs /home/doe/work/foo/src/js/file1.js \\\n             /home/doe/work/foo/src/js/file2.js \\\n             -o foo.min.js \\\n             --source-map foo.min.js.map \\\n             --source-map-root http://foo.com/src \\\n             -p 5 -c -m\n\nThe above will compress and mangle `file1.js` and `file2.js`, will drop the\noutput in `foo.min.js` and the source map in `foo.min.js.map`.  The source\nmapping will refer to `http://foo.com/src/js/file1.js` and\n`http://foo.com/src/js/file2.js` (in fact it will list `http://foo.com/src`\nas the source map root, and the original files as `js/file1.js` and\n`js/file2.js`).\n\n### Composed source map\n\nWhen you\'re compressing JS code that was output by a compiler such as\nCoffeeScript, mapping to the JS code won\'t be too helpful.  Instead, you\'d\nlike to map back to the original code (i.e. CoffeeScript).  UglifyJS has an\noption to take an input source map.  Assuming you have a mapping from\nCoffeeScript → compiled JS, UglifyJS can generate a map from CoffeeScript →\ncompressed JS by mapping every token in the compiled JS to its original\nlocation.\n\nTo use this feature you need to pass `--in-source-map\n/path/to/input/source.map`.  Normally the input source map should also point\nto the file containing the generated JS, so if that\'s correct you can omit\ninput files from the command line.\n\n## Mangler options\n\nTo enable the mangler you need to pass `--mangle` (`-m`).  The following\n(comma-separated) options are supported:\n\n- `sort` — to assign shorter names to most frequently used variables.  This\n  saves a few hundred bytes on jQuery before gzip, but the output is\n  _bigger_ after gzip (and seems to happen for other libraries I tried it\n  on) therefore it\'s not enabled by default.\n\n- `toplevel` — mangle names declared in the toplevel scope (disabled by\n  default).\n\n- `eval` — mangle names visible in scopes where `eval` or `with` are used\n  (disabled by default).\n\nWhen mangling is enabled but you want to prevent certain names from being\nmangled, you can declare those names with `--reserved` (`-r`) — pass a\ncomma-separated list of names.  For example:\n\n    uglifyjs ... -m -r \'$,require,exports\'\n\nto prevent the `require`, `exports` and `$` names from being changed.\n\n## Compressor options\n\nYou need to pass `--compress` (`-c`) to enable the compressor.  Optionally\nyou can pass a comma-separated list of options.  Options are in the form\n`foo=bar`, or just `foo` (the latter implies a boolean option that you want\nto set `true`; it\'s effectively a shortcut for `foo=true`).\n\n- `sequences` -- join consecutive simple statements using the comma operator\n\n- `properties` -- rewrite property access using the dot notation, for\n  example `foo["bar"] → foo.bar`\n\n- `dead_code` -- remove unreachable code\n\n- `drop_debugger` -- remove `debugger;` statements\n\n- `unsafe` (default: false) -- apply "unsafe" transformations (discussion below)\n\n- `conditionals` -- apply optimizations for `if`-s and conditional\n  expressions\n\n- `comparisons` -- apply certain optimizations to binary nodes, for example:\n  `!(a <= b) → a > b` (only when `unsafe`), attempts to negate binary nodes,\n  e.g. `a = !b && !c && !d && !e → a=!(b||c||d||e)` etc.\n\n- `evaluate` -- attempt to evaluate constant expressions\n\n- `booleans` -- various optimizations for boolean context, for example `!!a\n  ? b : c → a ? b : c`\n\n- `loops` -- optimizations for `do`, `while` and `for` loops when we can\n  statically determine the condition\n\n- `unused` -- drop unreferenced functions and variables\n\n- `hoist_funs` -- hoist function declarations\n\n- `hoist_vars` (default: false) -- hoist `var` declarations (this is `false`\n  by default because it seems to increase the size of the output in general)\n\n- `if_return` -- optimizations for if/return and if/continue\n\n- `join_vars` -- join consecutive `var` statements\n\n- `cascade` -- small optimization for sequences, transform `x, x` into `x`\n  and `x = something(), x` into `x = something()`\n\n- `warnings` -- display warnings when dropping unreachable code or unused\n  declarations etc.\n\n- `negate_iife` -- negate "Immediately-Called Function Expressions"\n  where the return value is discarded, to avoid the parens that the\n  code generator would insert.\n\n- `pure_getters` -- the default is `false`.  If you pass `true` for\n  this, UglifyJS will assume that object property access\n  (e.g. `foo.bar` or `foo["bar"]`) doesn\'t have any side effects.\n\n- `pure_funcs` -- default `null`.  You can pass an array of names and\n  UglifyJS will assume that those functions do not produce side\n  effects.  DANGER: will not check if the name is redefined in scope.\n  An example case here, for instance `var q = Math.floor(a/b)`.  If\n  variable `q` is not used elsewhere, UglifyJS will drop it, but will\n  still keep the `Math.floor(a/b)`, not knowing what it does.  You can\n  pass `pure_funcs: [ \'Math.floor\' ]` to let it know that this\n  function won\'t produce any side effect, in which case the whole\n  statement would get discarded.  The current implementation adds some\n  overhead (compression will be slower).\n\n- `drop_console` -- default `false`.  Pass `true` to discard calls to\n  `console.*` functions.\n\n### The `unsafe` option\n\nIt enables some transformations that *might* break code logic in certain\ncontrived cases, but should be fine for most code.  You might want to try it\non your own code, it should reduce the minified size.  Here\'s what happens\nwhen this flag is on:\n\n- `new Array(1, 2, 3)` or `Array(1, 2, 3)` → `[1, 2, 3 ]`\n- `new Object()` → `{}`\n- `String(exp)` or `exp.toString()` → `"" + exp`\n- `new Object/RegExp/Function/Error/Array (...)` → we discard the `new`\n- `typeof foo == "undefined"` → `foo === void 0`\n- `void 0` → `undefined` (if there is a variable named "undefined" in\n  scope; we do it because the variable name will be mangled, typically\n  reduced to a single character).\n\n### Conditional compilation\n\nYou can use the `--define` (`-d`) switch in order to declare global\nvariables that UglifyJS will assume to be constants (unless defined in\nscope).  For example if you pass `--define DEBUG=false` then, coupled with\ndead code removal UglifyJS will discard the following from the output:\n```javascript\nif (DEBUG) {\n\tconsole.log("debug stuff");\n}\n```\n\nUglifyJS will warn about the condition being always false and about dropping\nunreachable code; for now there is no option to turn off only this specific\nwarning, you can pass `warnings=false` to turn off *all* warnings.\n\nAnother way of doing that is to declare your globals as constants in a\nseparate file and include it into the build.  For example you can have a\n`build/defines.js` file with the following:\n```javascript\nconst DEBUG = false;\nconst PRODUCTION = true;\n// etc.\n```\n\nand build your code like this:\n\n    uglifyjs build/defines.js js/foo.js js/bar.js... -c\n\nUglifyJS will notice the constants and, since they cannot be altered, it\nwill evaluate references to them to the value itself and drop unreachable\ncode as usual.  The possible downside of this approach is that the build\nwill contain the `const` declarations.\n\n<a name="codegen-options"></a>\n## Beautifier options\n\nThe code generator tries to output shortest code possible by default.  In\ncase you want beautified output, pass `--beautify` (`-b`).  Optionally you\ncan pass additional arguments that control the code output:\n\n- `beautify` (default `true`) -- whether to actually beautify the output.\n  Passing `-b` will set this to true, but you might need to pass `-b` even\n  when you want to generate minified code, in order to specify additional\n  arguments, so you can use `-b beautify=false` to override it.\n- `indent-level` (default 4)\n- `indent-start` (default 0) -- prefix all lines by that many spaces\n- `quote-keys` (default `false`) -- pass `true` to quote all keys in literal\n  objects\n- `space-colon` (default `true`) -- insert a space after the colon signs\n- `ascii-only` (default `false`) -- escape Unicode characters in strings and\n  regexps\n- `inline-script` (default `false`) -- escape the slash in occurrences of\n  `</script` in strings\n- `width` (default 80) -- only takes effect when beautification is on, this\n  specifies an (orientative) line width that the beautifier will try to\n  obey.  It refers to the width of the line text (excluding indentation).\n  It doesn\'t work very well currently, but it does make the code generated\n  by UglifyJS more readable.\n- `max-line-len` (default 32000) -- maximum line length (for uglified code)\n- `bracketize` (default `false`) -- always insert brackets in `if`, `for`,\n  `do`, `while` or `with` statements, even if their body is a single\n  statement.\n- `semicolons` (default `true`) -- separate statements with semicolons.  If\n  you pass `false` then whenever possible we will use a newline instead of a\n  semicolon, leading to more readable output of uglified code (size before\n  gzip could be smaller; size after gzip insignificantly larger).\n- `preamble` (default `null`) -- when passed it must be a string and\n  it will be prepended to the output literally.  The source map will\n  adjust for this text.  Can be used to insert a comment containing\n  licensing information, for example.\n\n### Keeping copyright notices or other comments\n\nYou can pass `--comments` to retain certain comments in the output.  By\ndefault it will keep JSDoc-style comments that contain "@preserve",\n"@license" or "@cc_on" (conditional compilation for IE).  You can pass\n`--comments all` to keep all the comments, or a valid JavaScript regexp to\nkeep only comments that match this regexp.  For example `--comments\n\'/foo|bar/\'` will keep only comments that contain "foo" or "bar".\n\nNote, however, that there might be situations where comments are lost.  For\nexample:\n```javascript\nfunction f() {\n\t/** @preserve Foo Bar */\n\tfunction g() {\n\t  // this function is never called\n\t}\n\treturn something();\n}\n```\n\nEven though it has "@preserve", the comment will be lost because the inner\nfunction `g` (which is the AST node to which the comment is attached to) is\ndiscarded by the compressor as not referenced.\n\nThe safest comments where to place copyright information (or other info that\nneeds to be kept in the output) are comments attached to toplevel nodes.\n\n## Support for the SpiderMonkey AST\n\nUglifyJS2 has its own abstract syntax tree format; for\n[practical reasons](http://lisperator.net/blog/uglifyjs-why-not-switching-to-spidermonkey-ast/)\nwe can\'t easily change to using the SpiderMonkey AST internally.  However,\nUglifyJS now has a converter which can import a SpiderMonkey AST.\n\nFor example [Acorn][acorn] is a super-fast parser that produces a\nSpiderMonkey AST.  It has a small CLI utility that parses one file and dumps\nthe AST in JSON on the standard output.  To use UglifyJS to mangle and\ncompress that:\n\n    acorn file.js | uglifyjs --spidermonkey -m -c\n\nThe `--spidermonkey` option tells UglifyJS that all input files are not\nJavaScript, but JS code described in SpiderMonkey AST in JSON.  Therefore we\ndon\'t use our own parser in this case, but just transform that AST into our\ninternal AST.\n\n### Use Acorn for parsing\n\nMore for fun, I added the `--acorn` option which will use Acorn to do all\nthe parsing.  If you pass this option, UglifyJS will `require("acorn")`.\n\nAcorn is really fast (e.g. 250ms instead of 380ms on some 650K code), but\nconverting the SpiderMonkey tree that Acorn produces takes another 150ms so\nin total it\'s a bit more than just using UglifyJS\'s own parser.\n\nAPI Reference\n-------------\n\nAssuming installation via NPM, you can load UglifyJS in your application\nlike this:\n```javascript\nvar UglifyJS = require("uglify-js");\n```\n\nIt exports a lot of names, but I\'ll discuss here the basics that are needed\nfor parsing, mangling and compressing a piece of code.  The sequence is (1)\nparse, (2) compress, (3) mangle, (4) generate output code.\n\n### The simple way\n\nThere\'s a single toplevel function which combines all the steps.  If you\ndon\'t need additional customization, you might want to go with `minify`.\nExample:\n```javascript\nvar result = UglifyJS.minify("/path/to/file.js");\nconsole.log(result.code); // minified output\n// if you need to pass code instead of file name\nvar result = UglifyJS.minify("var b = function () {};", {fromString: true});\n```\n\nYou can also compress multiple files:\n```javascript\nvar result = UglifyJS.minify([ "file1.js", "file2.js", "file3.js" ]);\nconsole.log(result.code);\n```\n\nTo generate a source map:\n```javascript\nvar result = UglifyJS.minify([ "file1.js", "file2.js", "file3.js" ], {\n\toutSourceMap: "out.js.map"\n});\nconsole.log(result.code); // minified output\nconsole.log(result.map);\n```\n\nNote that the source map is not saved in a file, it\'s just returned in\n`result.map`.  The value passed for `outSourceMap` is only used to set the\n`file` attribute in the source map (see [the spec][sm-spec]).\n\nYou can also specify sourceRoot property to be included in source map:\n```javascript\nvar result = UglifyJS.minify([ "file1.js", "file2.js", "file3.js" ], {\n\toutSourceMap: "out.js.map",\n\tsourceRoot: "http://example.com/src"\n});\n```\n\nIf you\'re compressing compiled JavaScript and have a source map for it, you\ncan use the `inSourceMap` argument:\n```javascript\nvar result = UglifyJS.minify("compiled.js", {\n\tinSourceMap: "compiled.js.map",\n\toutSourceMap: "minified.js.map"\n});\n// same as before, it returns `code` and `map`\n```\n\nThe `inSourceMap` is only used if you also request `outSourceMap` (it makes\nno sense otherwise).\n\nOther options:\n\n- `warnings` (default `false`) — pass `true` to display compressor warnings.\n\n- `fromString` (default `false`) — if you pass `true` then you can pass\n  JavaScript source code, rather than file names.\n\n- `mangle` — pass `false` to skip mangling names.\n\n- `output` (default `null`) — pass an object if you wish to specify\n  additional [output options][codegen].  The defaults are optimized\n  for best compression.\n\n- `compress` (default `{}`) — pass `false` to skip compressing entirely.\n  Pass an object to specify custom [compressor options][compressor].\n\nWe could add more options to `UglifyJS.minify` — if you need additional\nfunctionality please suggest!\n\n### The hard way\n\nFollowing there\'s more detailed API info, in case the `minify` function is\ntoo simple for your needs.\n\n#### The parser\n```javascript\nvar toplevel_ast = UglifyJS.parse(code, options);\n```\n\n`options` is optional and if present it must be an object.  The following\nproperties are available:\n\n- `strict` — disable automatic semicolon insertion and support for trailing\n  comma in arrays and objects\n- `filename` — the name of the file where this code is coming from\n- `toplevel` — a `toplevel` node (as returned by a previous invocation of\n  `parse`)\n\nThe last two options are useful when you\'d like to minify multiple files and\nget a single file as the output and a proper source map.  Our CLI tool does\nsomething like this:\n```javascript\nvar toplevel = null;\nfiles.forEach(function(file){\n\tvar code = fs.readFileSync(file, "utf8");\n\ttoplevel = UglifyJS.parse(code, {\n\t\tfilename: file,\n\t\ttoplevel: toplevel\n\t});\n});\n```\n\nAfter this, we have in `toplevel` a big AST containing all our files, with\neach token having proper information about where it came from.\n\n#### Scope information\n\nUglifyJS contains a scope analyzer that you need to call manually before\ncompressing or mangling.  Basically it augments various nodes in the AST\nwith information about where is a name defined, how many times is a name\nreferenced, if it is a global or not, if a function is using `eval` or the\n`with` statement etc.  I will discuss this some place else, for now what\'s\nimportant to know is that you need to call the following before doing\nanything with the tree:\n```javascript\ntoplevel.figure_out_scope()\n```\n\n#### Compression\n\nLike this:\n```javascript\nvar compressor = UglifyJS.Compressor(options);\nvar compressed_ast = toplevel.transform(compressor);\n```\n\nThe `options` can be missing.  Available options are discussed above in\n“Compressor options”.  Defaults should lead to best compression in most\nscripts.\n\nThe compressor is destructive, so don\'t rely that `toplevel` remains the\noriginal tree.\n\n#### Mangling\n\nAfter compression it is a good idea to call again `figure_out_scope` (since\nthe compressor might drop unused variables / unreachable code and this might\nchange the number of identifiers or their position).  Optionally, you can\ncall a trick that helps after Gzip (counting character frequency in\nnon-mangleable words).  Example:\n```javascript\ncompressed_ast.figure_out_scope();\ncompressed_ast.compute_char_frequency();\ncompressed_ast.mangle_names();\n```\n\n#### Generating output\n\nAST nodes have a `print` method that takes an output stream.  Essentially,\nto generate code you do this:\n```javascript\nvar stream = UglifyJS.OutputStream(options);\ncompressed_ast.print(stream);\nvar code = stream.toString(); // this is your minified code\n```\n\nor, for a shortcut you can do:\n```javascript\nvar code = compressed_ast.print_to_string(options);\n```\n\nAs usual, `options` is optional.  The output stream accepts a lot of otions,\nmost of them documented above in section “Beautifier options”.  The two\nwhich we care about here are `source_map` and `comments`.\n\n#### Keeping comments in the output\n\nIn order to keep certain comments in the output you need to pass the\n`comments` option.  Pass a RegExp or a function.  If you pass a RegExp, only\nthose comments whose body matches the regexp will be kept.  Note that body\nmeans without the initial `//` or `/*`.  If you pass a function, it will be\ncalled for every comment in the tree and will receive two arguments: the\nnode that the comment is attached to, and the comment token itself.\n\nThe comment token has these properties:\n\n- `type`: "comment1" for single-line comments or "comment2" for multi-line\n  comments\n- `value`: the comment body\n- `pos` and `endpos`: the start/end positions (zero-based indexes) in the\n  original code where this comment appears\n- `line` and `col`: the line and column where this comment appears in the\n  original code\n- `file` — the file name of the original file\n- `nlb` — true if there was a newline before this comment in the original\n  code, or if this comment contains a newline.\n\nYour function should return `true` to keep the comment, or a falsy value\notherwise.\n\n#### Generating a source mapping\n\nYou need to pass the `source_map` argument when calling `print`.  It needs\nto be a `SourceMap` object (which is a thin wrapper on top of the\n[source-map][source-map] library).\n\nExample:\n```javascript\nvar source_map = UglifyJS.SourceMap(source_map_options);\nvar stream = UglifyJS.OutputStream({\n\t...\n\tsource_map: source_map\n});\ncompressed_ast.print(stream);\n\nvar code = stream.toString();\nvar map = source_map.toString(); // json output for your source map\n```\n\nThe `source_map_options` (optional) can contain the following properties:\n\n- `file`: the name of the JavaScript output file that this mapping refers to\n- `root`: the `sourceRoot` property (see the [spec][sm-spec])\n- `orig`: the "original source map", handy when you compress generated JS\n  and want to map the minified output back to the original code where it\n  came from.  It can be simply a string in JSON, or a JSON object containing\n  the original source map.\n\n  [acorn]: https://github.com/marijnh/acorn\n  [source-map]: https://github.com/mozilla/source-map\n  [sm-spec]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit\n  [codegen]: http://lisperator.net/uglifyjs/codegen\n  [compressor]: http://lisperator.net/uglifyjs/compress\n',
 35 silly resolved     readmeFilename: 'README.md',
-35 silly resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
-35 silly resolved     _id: 'bower@1.3.3',
-35 silly resolved     _from: 'bower@' } ]
-36 info install bower@1.3.3 into /usr/local/lib
-37 info installOne bower@1.3.3
-38 info /usr/local/lib/node_modules/bower unbuild
-39 verbose tar unpack /Users/e.firsov/.npm/bower/1.3.3/package.tgz
-40 silly lockFile 1396471b-usr-local-lib-node-modules-bower tar:///usr/local/lib/node_modules/bower
-41 verbose lock tar:///usr/local/lib/node_modules/bower /Users/e.firsov/.npm/1396471b-usr-local-lib-node-modules-bower.lock
-42 silly lockFile 379398aa-rsov-npm-bower-1-3-3-package-tgz tar:///Users/e.firsov/.npm/bower/1.3.3/package.tgz
-43 verbose lock tar:///Users/e.firsov/.npm/bower/1.3.3/package.tgz /Users/e.firsov/.npm/379398aa-rsov-npm-bower-1-3-3-package-tgz.lock
-44 silly gunzTarPerm modes [ '755', '644' ]
-45 error Error: EACCES, mkdir '/usr/local/lib/node_modules/bower'
-45 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/bower']
-45 error   errno: 3,
-45 error   code: 'EACCES',
-45 error   path: '/usr/local/lib/node_modules/bower',
-45 error   fstream_type: 'Directory',
-45 error   fstream_path: '/usr/local/lib/node_modules/bower',
-45 error   fstream_class: 'DirWriter',
-45 error   fstream_stack:
-45 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-45 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
-45 error      'Object.oncomplete (fs.js:107:15)' ] }
-46 error Please try running this command again as root/Administrator.
-47 error System Darwin 13.1.0
-48 error command "node" "/usr/local/bin/npm" "isntall" "-g" "bower"
-49 error cwd /Users/e.firsov/PhpstormProjects/maps
-50 error node -v v0.10.26
-51 error npm -v 1.4.3
-52 error path /usr/local/lib/node_modules/bower
-53 error fstream_path /usr/local/lib/node_modules/bower
-54 error fstream_type Directory
-55 error fstream_class DirWriter
-56 error code EACCES
-57 error errno 3
-58 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/bower'
-59 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-59 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
-59 error fstream_stack Object.oncomplete (fs.js:107:15)
-60 verbose exit [ 3, true ]
+35 silly resolved     bugs: { url: 'https://github.com/mishoo/UglifyJS2/issues' },
+35 silly resolved     _id: 'uglify-js@2.4.13',
+35 silly resolved     _shasum: '18debc9e6ecfc20db1a5ea035f839d436a605aba',
+35 silly resolved     _from: 'uglify-js@',
+35 silly resolved     _resolved: 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.4.13.tgz' } ]
+36 info install uglify-js@2.4.13 into /usr/local/lib
+37 info installOne uglify-js@2.4.13
+38 info /usr/local/lib/node_modules/uglify-js unbuild
+39 info preuninstall uglify-js@2.4.13
+40 info uninstall uglify-js@2.4.13
+41 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild uglify-js@2.4.13
+42 verbose /usr/local/bin,[object Object] binRoot
+43 info postuninstall uglify-js@2.4.13
+44 info /usr/local/lib/node_modules/uglify-js unbuild
+45 info preuninstall uglify-js@2.4.13
+46 info uninstall uglify-js@2.4.13
+47 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild uglify-js@2.4.13
+48 verbose /usr/local/bin,[object Object] binRoot
+49 info postuninstall uglify-js@2.4.13
+50 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/uglify-js'
+50 error error rolling back  uglify-js@2.4.13 { [Error: EACCES, unlink '/usr/local/lib/node_modules/uglify-js']
+50 error error rolling back   errno: 3,
+50 error error rolling back   code: 'EACCES',
+50 error error rolling back   path: '/usr/local/lib/node_modules/uglify-js' }
+51 error Error: EACCES, unlink '/usr/local/lib/node_modules/uglify-js'
+51 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/uglify-js']
+51 error   errno: 3,
+51 error   code: 'EACCES',
+51 error   path: '/usr/local/lib/node_modules/uglify-js' }
+52 error Please try running this command again as root/Administrator.
+53 error System Darwin 13.1.0
+54 error command "node" "/usr/local/bin/npm" "install" "uglify-js" "-g"
+55 error cwd /Users/e.firsov/PhpstormProjects/maps
+56 error node -v v0.10.28
+57 error npm -v 1.4.9
+58 error path /usr/local/lib/node_modules/uglify-js
+59 error code EACCES
+60 error errno 3
+61 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/uglify-js'
+62 verbose exit [ 3, true ]
