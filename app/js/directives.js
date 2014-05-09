@@ -1,3 +1,5 @@
+/*jslint browser:true */
+/*global angular, console*/
 'use strict';
 
 /* Directives */
@@ -47,18 +49,16 @@ angular.module('myApp.directives', [])
                 $scope.drawPoint(MAP_PARAMS.LAT0, MAP_PARAMS.LON1);
                 $scope.drawPoint(MAP_PARAMS.LAT1, MAP_PARAMS.LON0);
 
-
-//                drawPoint(55.749595, 38.009993);
-
 //обновление данных от пользователя
-        $scope.$watch("CoordsData", function (points) {
-            if (points) {
-                for (var index in points) {
-                    $scope.drawPoint(points[index].coords.lat, points[index].coords.lon);
-                };
-//
-            }
-        });
+                $scope.$watch("CoordsData", function (points) {
+
+                    if (points) {
+                        var index;
+                        for (index in points) {
+                            $scope.drawPoint(points[index].coords.lat, points[index].coords.lon);
+                        }
+                    }
+                });
             }
         };
     });

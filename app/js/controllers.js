@@ -1,11 +1,11 @@
 /*jslint browser:true */
-/*global angular, console*/
+/*global angular, console, Firebase*/
 'use strict';
 
 /* Controllers */
 angular.module('myApp.controllers', [])
     .controller('loginCtrl', function ($scope, $rootScope, $location, localStorageService) {
-    console.log('add some changes2222')
+
         $scope.createToken = function () {
             return Math.random().toString(36).substr(2);
         };
@@ -35,7 +35,6 @@ angular.module('myApp.controllers', [])
                         }
                 };
                 break;
-
             }
 
             $rootScope.token = $scope.createToken();

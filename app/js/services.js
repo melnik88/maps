@@ -1,12 +1,9 @@
-'use strict';
 /*jslint browser:true */
 /*global angular, console*/
+'use strict';
 
 /* Services */
 
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
 angular.module('myApp.services', [])
     .constant(
         'MAP_PARAMS',
@@ -26,4 +23,4 @@ angular.module('myApp.services', [])
         {
             'PATH': 'https://mymaps.firebaseio.com/'
         }
-    )
+    );
