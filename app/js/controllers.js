@@ -5,7 +5,7 @@
 /* Controllers */
 angular.module('myApp.controllers', [])
     .controller('loginCtrl', function ($scope, $rootScope, $location, localStorageService) {
-
+    $scope.character = 'zombie_boy';
         $scope.createToken = function () {
             return Math.random().toString(36).substr(2);
         };

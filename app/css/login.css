@@ -29,14 +29,22 @@ body{
     display: none;
 }
 
-.b-login-form__sex+ label{
+.b-login-form__sex + label{
     display: inline-block;
     padding: 5px 20px;
     margin: 10px 0;
+    text-align: center;
+    width: 60px;
+}
+
+.b-login-form__sex + label> div{
+display: inline-block;
+
 }
 
 .b-login-form__sex:checked + label{
     outline: 3px solid rgb(0,0,0);
+    text-align: center;
 }
 
 .b-login-form__enter-but{
