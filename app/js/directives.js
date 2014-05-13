@@ -35,10 +35,11 @@ angular.module('myApp.directives', [])
                     var x,
                         y;
 //                    ctx.clearRect(0, 0, $scope.CanvasWidth, $scope.CanvasHeight);
-                    y = Math.abs(lat - MAP_PARAMS.LAT0) * $scope.y_coef + 12;
-                    x = Math.abs(lon - MAP_PARAMS.LON0) * $scope.x_coef + 12;
-                    $scope.ctx.fillStyle = "#FF0000";
-                    console.log(x + " " + y);
+                    y = Math.abs(lat - MAP_PARAMS.LAT0) * $scope.y_coef;
+                    x = Math.abs(lon - MAP_PARAMS.LON0) * $scope.x_coef;
+                    $scope.ctx.fillStyle = Math.floor(Math.random() * 16777215).toString(16);
+//                    console.log(x + " " + y);
+//                    console.log('point is drown')
                     $scope.ctx.fillRect(x, y, $scope.dotScale, $scope.dotScale);
                 }; //end of drawPoint
                 $scope.ctx.fillStyle = "#FF0000";

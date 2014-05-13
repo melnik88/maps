@@ -10,6 +10,8 @@ angular.module('myApp.controllers', [])
             return Math.random().toString(36).substr(2);
         };
 
+
+
         $scope.loginUser = function (name, character) {
             switch (character) {
             case "zombie_boy":
@@ -48,7 +50,7 @@ angular.module('myApp.controllers', [])
         $scope.firebaseConnect = new Firebase(FIREBASE_PARAMS.PATH);
 
         $scope.mapScale = MAP_PARAMS.SCALE;
-        $scope.CanvasWidth = 658;
+        $scope.CanvasWidth = 689;
         $scope.CanvasHeight = 856;
 
 //      dot size
@@ -62,10 +64,10 @@ angular.module('myApp.controllers', [])
         $scope.playerInit = function () {
             $rootScope.token = localStorageService.get('token');
             var dataRef = new Firebase(FIREBASE_PARAMS.PATH + $rootScope.token);
-            dataRef.on('value', function(snapshot) {
+            dataRef.on('value', function (snapshot) {
                 $rootScope.character = snapshot.val();
             });
-            console.log('player is inited')
+            console.log('player is inited');
         }
 
         $scope.getAllData = function () {

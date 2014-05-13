@@ -8,14 +8,14 @@ angular.module('myApp.services', [])
     .constant(
         'MAP_PARAMS',
         {
-            'WIDTH': 635,
-            'HEIGHT': 810,
+            'WIDTH': 556,
+            'HEIGHT': 697,
             'SCALE': 1120,
-            'SRC': 'img/zheleznodorozhny.jpg',
-            'LAT0': 55.753200,
-            'LON0': 38.004990,
-            'LAT1': 55.746016,
-            'LON1': 38.015001
+            'SRC': 'img/map2.jpg',
+            'LAT0': 55.745989,
+            'LON0': 37.924999,
+            'LAT1': 55.742361,
+            'LON1': 37.929990
         }
     )
     .constant(
