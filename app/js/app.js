@@ -3,19 +3,22 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('Game', [
     'ngRoute',
     'geolocation',
     'LocalStorageModule',
     'firebase',
-    'myApp.filters',
-    'myApp.services',
-    'myApp.directives',
-    'myApp.controllers'
+    'Game.filters',
+    'Game.services',
+    'Game.directives',
+    'Game.controllers'
 
 ])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/login', {templateUrl: 'partials/login.html', controller: 'loginCtrl'});
-        $routeProvider.when('/app', {templateUrl: 'partials/app.html', controller: 'appCtrl'});
-        $routeProvider.otherwise({redirectTo: '/login'});
+        $routeProvider
+            .when('/login', {templateUrl: 'partials/login.html', controller: 'loginCtrl'})
+            .when('/app', {templateUrl: 'partials/app.html', controller: 'gameCtrl'})
+            .when('/settings', {templateUrl: 'partials/settings.html', controller: 'gameCtrl'})
+            .when('/bag', {templateUrl: 'partials/bag.html', controller: 'gameCtrl'})
+            .otherwise({redirectTo: '/login'});
     }]);

@@ -4,7 +4,7 @@
 
 /* Directives */
 
-angular.module('myApp.directives', [])
+angular.module('Game.directives', [])
     .directive('map', function (MAP_PARAMS) {
         return {
             link: function ($scope, $element, attrs) {

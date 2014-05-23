@@ -4,7 +4,7 @@
 
 /* Services */
 
-angular.module('myApp.services', [])
+angular.module('Game.services', [])
     .constant(
         'MAP_PARAMS',
         {
