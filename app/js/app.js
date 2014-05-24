@@ -14,11 +14,21 @@ angular.module('Game', [
     'Game.controllers'
 
 ])
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(function ($routeProvider) {
         $routeProvider
             .when('/login', {templateUrl: 'partials/login.html', controller: 'loginCtrl'})
             .when('/app', {templateUrl: 'partials/app.html', controller: 'gameCtrl'})
             .when('/settings', {templateUrl: 'partials/settings.html', controller: 'gameCtrl'})
             .when('/bag', {templateUrl: 'partials/bag.html', controller: 'gameCtrl'})
             .otherwise({redirectTo: '/login'});
-    }]);
+    })
+    .run(function ($location, $rootScope, User) {
+        $rootScope.token = User.restoreToken() || "";
+
+        $rootScope.$on('$routeChangeStart', function (event, next, current) {
+            if (!User.is_login()) {
+                $location.path('/login');
+            }
+        });
+
+    });

@@ -4,49 +4,17 @@
 
 /* Controllers */
 angular.module('Game.controllers', [])
-    .controller('loginCtrl', function ($scope, $rootScope, $location, localStorageService) {
-        var createToken;
-
+    .controller('loginCtrl', function ($scope, $location, User) {
         $scope.character = 'zombie_boy';
 
-        createToken = function () {
-            return Math.random().toString(36).substr(2);
-        };
-
-        $scope.loginUser = function (name, character) {
-            switch (character) {
-            case "zombie_boy":
-                $rootScope.character = {
-                    name: name,
-                    xp: 20,
-                    coords:
-                        {
-                            lat: 0,
-                            lon: 0
-                        }
-                };
-                break;
-
-            case "zombie_girl":
-                $rootScope.character = {
-                    name: name,
-                    xp: 10,
-                    coords:
-                        {
-                            lat: 0,
-                            lon: 0
-                        }
-                };
-                break;
-            }
-
-            $rootScope.token = createToken();
-            localStorageService.clearAll();
-            localStorageService.set('token', $rootScope.token);
+        $scope.login = function (name, character) {
+            User.login(name, character);
             $location.path('/app');
         };
+
     })
-    .controller('gameCtrl', function ($scope, MAP_PARAMS, FIREBASE_PARAMS, geolocation, $rootScope, $firebase,  localStorageService) {
+    .controller('gameCtrl', function ($scope, MAP_PARAMS, FIREBASE_PARAMS, geolocation, $rootScope, $firebase,  localStorageService, User, $location) {
+
 
         $scope.firebaseConnect = new Firebase(FIREBASE_PARAMS.PATH);
 

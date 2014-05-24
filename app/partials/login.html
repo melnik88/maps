@@ -1,4 +1,4 @@
-<form class="b-login-form">
+<form class="b-login-form" ng-submit="login(name, login)">
     <h1>player's choice</h1>
     <label>name
         <input type="text" ng-model="name"/>
@@ -6,11 +6,17 @@
     <br/>
 
     <input id="zombie_boy" class="b-login-form__sex" type="radio" ng-model="character" value="zombie_boy"/>
-    <label for="zombie_boy"><div class="b-zombie-boy"></div><div>male</div> </label>
+    <label for="zombie_boy">
+        <div class="b-zombie-boy"></div>
+        <div>male</div>
+    </label>
 
     <input type="radio" id="zombie_girl" class="b-login-form__sex" ng-model="character" value="zombie_girl"/>
-    <label for="zombie_girl"><div class="b-zombie-girl"></div><div>female</div></label>
+    <label for="zombie_girl">
+        <div class="b-zombie-girl"></div>
+        <div>female</div>
+    </label>
     <br/>
-    <button type="text" class="b-login-form__enter-but" ng-click = "loginUser(name, character)">Enter</button>
+    <input type="submit" class="b-login-form__enter-but" value="Enter" >
 
 </form>
